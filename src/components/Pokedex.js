@@ -37,7 +37,7 @@ class Pokedex extends Component {
     
         return (
           <div>
-            <h1>Pokedex</h1>
+            <h1>Pokeact</h1>
             <p>Pokémon's Pokedex built with React, PokéAPI and PokemonDB</p>
             {contents}
           </div>
