@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import Pokedex from './components/Pokedex';
-import Details from './components/Details';
 import { Container } from '@material-ui/core';
 
 

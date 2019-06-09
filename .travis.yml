@@ -6,7 +6,8 @@ cache:
   - node_modules
 script:
   - npm test
-  - npm run build
+  - npm cache verify
+  - npm run-script build
 deploy:
   provider: heroku
   api_key: $HEROKU_API_KEY
