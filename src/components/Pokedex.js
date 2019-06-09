@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Pokemon from './Pokemon';
-import { Grid } from '@material-ui/core';
+import { Grid, Grow } from '@material-ui/core';
 
 class Pokedex extends Component {
     static displayName = Pokedex.name;
@@ -21,7 +21,9 @@ class Pokedex extends Component {
           <Grid container spacing={0}>
               {pokemons.results.map(pkm => 
                 <Grid item xs={3} >
-                  <Pokemon pokemonName={pkm.name}></Pokemon>
+                  <Grow>
+                    <Pokemon pokemonName={pkm.name}></Pokemon>
+                  </Grow>
                 </Grid>
                 )}
           </Grid>

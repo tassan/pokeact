@@ -34,7 +34,7 @@ export class Pokemon extends Component {
             <Avatar alt={pokemon.name} src={`https://img.pokemondb.net/sprites/sun-moon/icon/${pokemon.name}.png`} />
           </ListItemAvatar>
           <ListItemText>
-            {pokemon.name}
+            {pokemon.name} 
           </ListItemText>
         </ListItem>
       </Paper>
