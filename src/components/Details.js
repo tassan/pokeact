@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Pokemon from './Pokemon';
 import Species from './Species'
 import './Details.css'
 import { Grid, Avatar, Card, CardHeader, CardContent } from '@material-ui/core';
