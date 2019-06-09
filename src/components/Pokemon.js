@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ListItem from '@material-ui/core/ListItem'
-import { ListItemText, ListItemAvatar, Avatar, Paper, Image } from '@material-ui/core';
+import { ListItemText, ListItemAvatar, Avatar, Paper } from '@material-ui/core';
 import './Pokemon.css';
 
 export class Pokemon extends Component {
@@ -20,12 +20,12 @@ export class Pokemon extends Component {
   //   cdn.bulbagarden.net/upload/d/d4/{pokemon.id}.png
   // https://assets.pokemon.com/assets/cms2/img/pokedex/full/809.png
   static renderPokemon (pokemon) {
-    var url = "https://cdn.bulbagarden.net/upload/e/ec/"
-    var extension = "MS.png";
-    var str = "" + pokemon.id
-    var pad = "000"
-    var ans = pad.substring(0, pad.length - str.length) + str
-    var link = url + ans + extension;
+    // var url = "https://cdn.bulbagarden.net/upload/e/ec/"
+    // var extension = "MS.png";
+    // var str = "" + pokemon.id
+    // var pad = "000"
+    // var ans = pad.substring(0, pad.length - str.length) + str
+    // var link = url + ans + extension;
 
     return (
       <Paper className="spacing">

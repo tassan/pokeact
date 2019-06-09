@@ -2,24 +2,24 @@ import React, { Component } from 'react';
 import Pokemon from './Pokemon';
 import { Grid } from '@material-ui/core';
 
-class Pokedex extends Component {
-    static displayName = Pokedex.name;
+class Details extends Component {
+    static displayName = Details.name;
 
     constructor (props) {
         super(props);
-        this.state = { pokemons: [], loading: true };
+        this.state = { pokemon: [], loading: true };
        // img src = //cdn.bulbagarden.net/upload/d/d4/770MS.png
-        fetch('https://pokeapi.co/api/v2/pokemon/?limit=151')
+        fetch('https://pokeapi.co/api/v2/pokemon-form/' + props.id)
             .then(response => response.json())
             .then(data => {
-                this.setState({ pokemons: data, loading: false });
+                this.setState({ pokemon: data, loading: false });
             });
     }
 
-    static renderPokedex (pokemons) {
+    static renderDetails (pokemon) {
         return (
           <Grid container spacing={0}>
-              {pokemons.results.map(pkm => 
+              {pokemon.results.map(pkm => 
                 <Grid item xs={3} >
                   <Pokemon pokemonName={pkm.name}></Pokemon>
                 </Grid>
@@ -32,7 +32,7 @@ class Pokedex extends Component {
       render () {
         let contents = this.state.loading
           ? <p><em>Loading...</em></p>
-          : Pokedex.renderPokedex(this.state.pokemons);
+          : Details.renderPokedex(this.state.pokemons);
     
         return (
           <div>
@@ -44,4 +44,4 @@ class Pokedex extends Component {
       }
 }
 
-export default Pokedex;
+export default Details;
