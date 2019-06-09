@@ -2,12 +2,13 @@ language: node_js
 node_js:
   - "stable"
 cache:
+  yarn: true
   directories:
   - node_modules
 script:
   - npm test
   - npm cache verify
-  - npm run-script build
+  - yarn build
 deploy:
   provider: heroku
   api_key: $HEROKU_API_KEY
